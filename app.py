@@ -1751,8 +1751,6 @@ def page_broadcast_log():
     for idx, entry in enumerate(log):
         incident    = next((i for i in all_incidents if i["id"] == entry["incident_id"]), None)
         sev         = entry.get("severity", "Unknown")
-        label       = entry.get("label", "NEW")
-        label_cls   = "badge-new" if label == "NEW" else "badge-medium"
         ts          = entry["broadcast_at"][:16].replace("T", " at ")
         reviewers   = entry.get("reviewers", [])
         e_markets   = entry.get("markets", [entry.get("market", "")] if entry.get("market") else [])
@@ -1787,26 +1785,27 @@ def page_broadcast_log():
         is_log_only       = (incident or {}).get("log_only", False)
         can_edit          = not is_resolved and not is_log_only
 
-        # Cooldown: 120s from last_broadcast_at (fallback to created_at)
-        _last_bc = (incident or {}).get("last_broadcast_at") or (incident or {}).get("created_at", "")
-        try:
-            _last_bc_dt  = dt.datetime.fromisoformat(_last_bc[:26])
-            _elapsed     = (_now_ts - _last_bc_dt).total_seconds()
-            cooldown_rem = max(0, int(120 - _elapsed))
-        except (ValueError, TypeError):
-            cooldown_rem = 0
+        # Cooldown: 120s from last_broadcast_at only (no fallback — first broadcast has no cooldown)
+        _last_bc = (incident or {}).get("last_broadcast_at")
+        cooldown_rem = 0
+        if _last_bc:
+            try:
+                _last_bc_dt  = dt.datetime.fromisoformat(_last_bc[:26])
+                _elapsed     = (_now_ts - _last_bc_dt).total_seconds()
+                cooldown_rem = max(0, int(120 - _elapsed))
+            except (ValueError, TypeError):
+                cooldown_rem = 0
 
         can_rebroadcast = (
             not is_resolved
             and not is_log_only
-            and len(impacted_now_list) > 0
             and cooldown_rem == 0
         )
         can_resolve = not is_resolved and not is_log_only
 
         rb_label = (
             f"📡  {cooldown_rem}s"
-            if (not is_resolved and not is_log_only and len(impacted_now_list) > 0 and cooldown_rem > 0)
+            if (not is_resolved and not is_log_only and cooldown_rem > 0)
             else "📡  Rebroadcast"
         )
 
@@ -1868,7 +1867,6 @@ def page_broadcast_log():
                     f'background:var(--muted);padding:2px 8px;border-radius:4px;">'
                     f'{inc_id}</span>'
                     f'{severity_badge(sev)}'
-                    f'<span class="badge {label_cls}">{label}</span>'
                     f'{history_html}'
                     f'<span style="display:inline-flex;align-items:center;gap:5px;'
                     f'font-size:0.7rem;color:var(--muted-text);font-family:Poppins,sans-serif;">'
