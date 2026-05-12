@@ -1,0 +1,618 @@
+[
+  {
+    "log_id": "67884CF2",
+    "incident_id": "75DD6FC9",
+    "incident_title": "Downtime issue ",
+    "market": "Philippines",
+    "team_lead": "TL_Philippines",
+    "severity": "Unknown",
+    "label": "NEW",
+    "reviewer_count": 5,
+    "reviewers": [
+      "alice_ph",
+      "bob_ph",
+      "carlos_ph",
+      "diana_ph",
+      "eve_ph"
+    ],
+    "broadcast_at": "2026-04-12T22:25:50.511941",
+    "simulated": true
+  },
+  {
+    "log_id": "52BB26F6",
+    "incident_id": "FE048A7A",
+    "incident_title": "Image loading delay and video not playing",
+    "market": "Thailand",
+    "team_lead": "Nattaya Siri",
+    "severity": "Unknown",
+    "label": "NEW",
+    "reviewer_count": 5,
+    "reviewers": [
+      "somchai_th",
+      "nattaya_th",
+      "prayuth_th",
+      "siriporn_th",
+      "wanchai_th"
+    ],
+    "broadcast_at": "2026-04-15T16:48:21.955981",
+    "simulated": false
+  },
+  {
+    "log_id": "F244A119",
+    "incident_id": "651458BF",
+    "incident_title": "Downtime issue",
+    "market": "Thailand",
+    "team_lead": "Lem",
+    "severity": "Unknown",
+    "label": "NEW",
+    "reviewer_count": 5,
+    "reviewers": [
+      "somchai_th",
+      "nattaya_th",
+      "prayuth_th",
+      "siriporn_th",
+      "wanchai_th"
+    ],
+    "broadcast_at": "2026-04-20T19:46:36.520064",
+    "simulated": false
+  },
+  {
+    "log_id": "65A68EF5",
+    "incident_id": "030EB042",
+    "incident_title": "donwtime ",
+    "market": "Thailand",
+    "team_lead": "Lem",
+    "severity": "Unknown",
+    "label": "NEW",
+    "reviewer_count": 5,
+    "reviewers": [
+      "somchai_th",
+      "nattaya_th",
+      "prayuth_th",
+      "siriporn_th",
+      "wanchai_th"
+    ],
+    "broadcast_at": "2026-04-20T20:18:54.981399",
+    "simulated": false
+  },
+  {
+    "log_id": "75CC2C1D",
+    "incident_id": "ABA66535",
+    "incident_title": "qweqwe",
+    "market": "Thailand",
+    "team_lead": "Lem",
+    "severity": "Unknown",
+    "label": "NEW",
+    "reviewer_count": 5,
+    "reviewers": [
+      "somchai_th",
+      "nattaya_th",
+      "prayuth_th",
+      "siriporn_th",
+      "wanchai_th"
+    ],
+    "broadcast_at": "2026-04-20T23:17:50.663310",
+    "simulated": false
+  },
+  {
+    "log_id": "5DF19699",
+    "incident_id": "4A08AFF4",
+    "incident_title": "Reviewer portal cannot access the production and view jobs",
+    "market": "Thailand",
+    "team_lead": "Lem",
+    "severity": "Unknown",
+    "label": "NEW",
+    "reviewer_count": 5,
+    "reviewers": [
+      "somchai_th",
+      "nattaya_th",
+      "prayuth_th",
+      "siriporn_th",
+      "wanchai_th"
+    ],
+    "broadcast_at": "2026-04-21T02:36:05.527103",
+    "simulated": false
+  },
+  {
+    "log_id": "AD10B0F0",
+    "incident_id": "08F36E8D",
+    "incident_title": "Video stop playing in the middle",
+    "markets": [
+      "Japanese",
+      "Cambodian",
+      "Sri Lankan"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": "AHT",
+    "team_lead": "Ashik",
+    "severity": "High",
+    "label": "NEW",
+    "reviewer_count": 30,
+    "reviewers": [
+      "nimal_lk",
+      "hana_jp",
+      "chan_kh",
+      "chamara_lk",
+      "dilani_lk",
+      "malika_lk",
+      "thilini_lk",
+      "vanna_kh",
+      "dara_kh",
+      "pisey_kh",
+      "arjuna_lk",
+      "haruto_jp",
+      "kumari_lk",
+      "sakura_jp",
+      "rith_kh",
+      "taro_jp",
+      "kenji_jp",
+      "aiko_jp",
+      "ren_jp",
+      "priya_lk",
+      "saman_lk",
+      "ruwan_lk",
+      "mony_kh",
+      "sota_jp",
+      "ratana_kh",
+      "miku_jp",
+      "sokha_kh",
+      "yuki_jp",
+      "sophea_kh",
+      "bunna_kh"
+    ],
+    "broadcast_at": "2026-04-22T08:04:55.222515",
+    "simulated": false
+  },
+  {
+    "log_id": "659AB15A",
+    "incident_id": "19797DF3",
+    "incident_title": "SRT automatically changed to unavailable",
+    "markets": [
+      "Japanese"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": "Maxbill",
+    "team_lead": "Ashik",
+    "severity": "High",
+    "label": "NEW",
+    "reviewer_count": 3,
+    "reviewers": [
+      "haruto_jp",
+      "hana_jp",
+      "yuki_jp"
+    ],
+    "broadcast_at": "2026-04-22T08:20:22.298686",
+    "simulated": false
+  },
+  {
+    "log_id": "88B134E4",
+    "incident_id": "AF637236",
+    "incident_title": "No job to review",
+    "markets": [
+      "ROW"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": "Volumes",
+    "team_lead": "Ashik",
+    "severity": "Medium",
+    "label": "NEW",
+    "reviewer_count": 3,
+    "reviewers": [
+      "riley_row",
+      "sam_row",
+      "alex_row"
+    ],
+    "broadcast_at": "2026-04-22T08:44:46.569716",
+    "simulated": false
+  },
+  {
+    "log_id": "5461733E",
+    "incident_id": "947FD709",
+    "incident_title": "SAML Response SIgning  via Login Service Failed",
+    "markets": [
+      "Japanese"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": "Maxbill",
+    "team_lead": "Ashik",
+    "severity": "Critical",
+    "label": "NEW",
+    "reviewer_count": 3,
+    "reviewers": [
+      "haruto_jp",
+      "hana_jp",
+      "yuki_jp"
+    ],
+    "broadcast_at": "2026-04-22T19:56:10.352070",
+    "simulated": false
+  },
+  {
+    "log_id": "DAC74D07",
+    "incident_id": "1FF21E01",
+    "incident_title": "Taking long time to load video/photo/audio",
+    "markets": [
+      "Sri Lankan",
+      "Vietnamese",
+      "Cambodian"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM",
+      "MESSENGER",
+      "IDVAAS HALO",
+      "IDVASS",
+      "IGPO",
+      "PI",
+      "MULTI-SKILL"
+    ],
+    "metric": [
+      "AHT"
+    ],
+    "team_lead": "Ashik",
+    "severity": "Medium",
+    "label": "NEW",
+    "reviewer_count": 30,
+    "reviewers": [
+      "nimal_lk",
+      "le_vn",
+      "dao_vn",
+      "chan_kh",
+      "chamara_lk",
+      "dilani_lk",
+      "malika_lk",
+      "tran_vn",
+      "thilini_lk",
+      "bui_vn",
+      "dara_kh",
+      "vanna_kh",
+      "pisey_kh",
+      "arjuna_lk",
+      "kumari_lk",
+      "dang_vn",
+      "do_vn",
+      "vu_vn",
+      "pham_vn",
+      "hoang_vn",
+      "rith_kh",
+      "priya_lk",
+      "saman_lk",
+      "ruwan_lk",
+      "mony_kh",
+      "nguyen_vn",
+      "ratana_kh",
+      "sokha_kh",
+      "sophea_kh",
+      "bunna_kh"
+    ],
+    "broadcast_at": "2026-04-23T01:31:21.364319",
+    "simulated": false
+  },
+  {
+    "log_id": "2EF99481",
+    "incident_id": "T543423",
+    "incident_title": "Reviewer not able to login Supernova",
+    "markets": [
+      "Japanese"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Maxbill"
+    ],
+    "team_lead": "Ashik",
+    "severity": "Unknown",
+    "label": "NEW",
+    "reviewer_count": 3,
+    "reviewers": [
+      "haruto_jp",
+      "hana_jp",
+      "yuki_jp"
+    ],
+    "broadcast_at": "2026-04-23T12:03:33.422298",
+    "simulated": false
+  },
+  {
+    "log_id": "8F53B368",
+    "incident_id": "T32483",
+    "incident_title": "SRT automatically changes code",
+    "markets": [
+      "Japanese",
+      "ROW",
+      "Korean",
+      "Mandarin",
+      "Malay",
+      "Cambodian",
+      "Thai",
+      "Vietnamese",
+      "Sri Lankan"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Maxbill",
+      "Utilization"
+    ],
+    "team_lead": "Ashik",
+    "severity": "Unknown",
+    "label": "NEW",
+    "reviewer_count": 29,
+    "reviewers": [
+      "hana_jp",
+      "le_vn",
+      "prayuth_th",
+      "alex_row",
+      "ahmad_my",
+      "hyunjin_kr",
+      "ming_cn",
+      "nimal_lk",
+      "vanna_kh",
+      "sam_row",
+      "somchai_th",
+      "haruto_jp",
+      "jisoo_kr",
+      "chan_kh",
+      "yuki_jp",
+      "yuna_kr",
+      "do_vn",
+      "wei_cn",
+      "priya_lk",
+      "arjuna_lk",
+      "wei_my",
+      "riley_row",
+      "hafiz_my",
+      "sophea_kh",
+      "nguyen_vn",
+      "sokha_kh",
+      "xiao_cn",
+      "kanya_th",
+      "ruwan_lk"
+    ],
+    "broadcast_at": "2026-04-23T14:53:54.368487",
+    "simulated": false
+  },
+  {
+    "log_id": "03B7BE1B",
+    "incident_id": "T2834822",
+    "incident_title": "No jobs recieved",
+    "markets": [
+      "Korean"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Volumes"
+    ],
+    "team_lead": "Ashik",
+    "severity": "Unknown",
+    "label": "NEW",
+    "reviewer_count": 3,
+    "reviewers": [
+      "jisoo_kr",
+      "yuna_kr",
+      "hyunjin_kr"
+    ],
+    "broadcast_at": "2026-04-27T20:18:50.279413",
+    "simulated": false
+  },
+  {
+    "log_id": "0A32FAE9",
+    "incident_id": "T23452",
+    "incident_title": "Loading content issue with three different types of errors",
+    "markets": [
+      "Japanese",
+      "Malay",
+      "Cambodian",
+      "ROW",
+      "Korean",
+      "Mandarin",
+      "Thai",
+      "Vietnamese",
+      "Sri Lankan"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Volumes"
+    ],
+    "team_lead": "Areeya",
+    "severity": "High",
+    "label": "NEW",
+    "reviewer_count": 29,
+    "reviewers": [
+      "somchai_th",
+      "ahmad_my",
+      "kanya_th",
+      "alex_row",
+      "xiao_cn",
+      "jisoo_kr",
+      "haruto_jp",
+      "nimal_lk",
+      "wei_my",
+      "riley_row",
+      "chan_kh",
+      "vanna_kh",
+      "do_vn",
+      "le_vn",
+      "yuki_jp",
+      "sokha_kh",
+      "sam_row",
+      "arjuna_lk",
+      "hyunjin_kr",
+      "hafiz_my",
+      "wei_cn",
+      "hana_jp",
+      "sophea_kh",
+      "ming_cn",
+      "prayuth_th",
+      "yuna_kr",
+      "priya_lk",
+      "nguyen_vn",
+      "ruwan_lk"
+    ],
+    "broadcast_at": "2026-04-29T08:45:58.133375",
+    "simulated": false
+  },
+  {
+    "log_id": "6B7B8084",
+    "incident_id": "T132434",
+    "incident_title": "Showing as \"Production\" but it recorded as \"unavailable\"",
+    "markets": [
+      "Japanese",
+      "Korean"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Utilization",
+      "Maxbill"
+    ],
+    "team_lead": "Areeya",
+    "severity": "High",
+    "label": "NEW",
+    "reviewer_count": 6,
+    "reviewers": [
+      "jisoo_kr",
+      "hyunjin_kr",
+      "haruto_jp",
+      "yuna_kr",
+      "yuki_jp",
+      "hana_jp"
+    ],
+    "broadcast_at": "2026-04-29T10:12:30.733550",
+    "simulated": false
+  },
+  {
+    "log_id": "9FDEB74D",
+    "incident_id": "T233522",
+    "incident_title": "No jobs to review in Queue",
+    "markets": [
+      "Malay"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "PI",
+      "CM"
+    ],
+    "metric": [
+      "Decision AHT"
+    ],
+    "team_lead": "Areeya",
+    "severity": "Medium",
+    "label": "NEW",
+    "reviewer_count": 5,
+    "reviewers": [
+      "wei_my",
+      "farah_my",
+      "hafiz_my",
+      "ahmad_my",
+      "azrul_my"
+    ],
+    "broadcast_at": "2026-04-29T18:52:13.440845",
+    "simulated": false
+  },
+  {
+    "log_id": "7D1E614A",
+    "incident_id": "T32904320",
+    "incident_title": "Video stop playing in the middle",
+    "markets": [
+      "Japanese",
+      "Sri Lankan"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "AHT"
+    ],
+    "team_lead": "Areeya",
+    "severity": "Medium",
+    "label": "NEW",
+    "reviewer_count": 7,
+    "reviewers": [
+      "nimal_lk",
+      "arjuna_lk",
+      "hana_jp",
+      "haruto_jp",
+      "yuki_jp",
+      "priya_lk",
+      "ruwan_lk"
+    ],
+    "broadcast_at": "2026-05-08T11:09:27.403234",
+    "simulated": false
+  },
+  {
+    "log_id": "A46C5365",
+    "incident_id": "T3294232",
+    "incident_title": "Unable to login into machine",
+    "markets": [
+      "Vietnamese"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Maxbill"
+    ],
+    "team_lead": "Areeya",
+    "severity": "High",
+    "label": "NEW",
+    "reviewer_count": 3,
+    "reviewers": [
+      "le_vn",
+      "do_vn",
+      "nguyen_vn"
+    ],
+    "broadcast_at": "2026-05-08T11:13:50.745660",
+    "simulated": false
+  }
+]

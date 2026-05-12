@@ -1,0 +1,906 @@
+[
+  {
+    "id": "08F36E8D",
+    "task_number": "T2134433",
+    "task_time": "20 Apr 2026 09:07 PM",
+    "title": "Video stop playing in the middle",
+    "description": "Video stops playing half-way affecting the AHT ",
+    "markets": [
+      "Japanese",
+      "Cambodian",
+      "Sri Lankan"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": "AHT",
+    "team_lead": "Ashik",
+    "created_at": "2026-04-22T08:04:42.187822",
+    "updated_at": "2026-04-23T02:15:10.947428",
+    "status": "open",
+    "classification": {
+      "category": "Performance Issue",
+      "severity": "High",
+      "priority": "P2",
+      "reasoning": "Video playback interruptions directly impact Average Handle Time (AHT), a critical operational metric. Medium pre-defined criticality combined with user-facing performance degradation warrants High severity.",
+      "remediation_actions": [
+        "Check video streaming service health and server logs immediately",
+        "Verify network bandwidth and connectivity to content delivery network",
+        "Review recent deployments or configuration changes affecting video delivery",
+        "Test video playback across different devices and browsers to isolate issue"
+      ]
+    },
+    "responses": {
+      "yuki_jp": true,
+      "haruto_jp": false,
+      "sakura_jp": true,
+      "kenji_jp": false,
+      "aiko_jp": false,
+      "hana_jp": true,
+      "ren_jp": true,
+      "sota_jp": false,
+      "miku_jp": false,
+      "taro_jp": false,
+      "nimal_lk": true,
+      "kumari_lk": false,
+      "ruwan_lk": true,
+      "dilani_lk": true,
+      "chamara_lk": true,
+      "priya_lk": false,
+      "saman_lk": false,
+      "thilini_lk": true,
+      "arjuna_lk": false,
+      "malika_lk": false
+    },
+    "resolution_responses": {},
+    "rebroadcast_history": [],
+    "last_broadcast_at": "2026-04-22T08:04:55.230240",
+    "remediation_actions": [
+      "Check video streaming service health and server logs immediately",
+      "Verify network bandwidth and connectivity to content delivery network",
+      "Review recent deployments or configuration changes affecting video delivery",
+      "Test video playback across different devices and browsers to isolate issue"
+    ],
+    "impact_analysis": null,
+    "report": null
+  },
+  {
+    "id": "19797DF3",
+    "task_number": "T312424",
+    "task_time": "13 Apr 2026 09:07 AM",
+    "title": "SRT automatically changed to unavailable",
+    "description": "Code changes to unavailable.",
+    "markets": [
+      "Japanese"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": "Maxbill",
+    "team_lead": "Ashik",
+    "created_at": "2026-04-22T08:20:15.070701",
+    "updated_at": "2026-04-22T18:30:56.840220",
+    "status": "open",
+    "classification": {
+      "category": "Application Issue",
+      "severity": "High",
+      "priority": "P1",
+      "reasoning": "Critical billing system (Maxbill) affected by unexpected code changes marking SRT unavailable. Pre-defined high criticality requires immediate remediation to restore service.",
+      "remediation_actions": [
+        "Immediately revert the code changes that caused SRT unavailability",
+        "Verify Maxbill is functioning normally and processing billing correctly",
+        "Review change logs to identify what code modifications were applied",
+        "Implement mandatory code review process before deploying critical system changes"
+      ]
+    },
+    "responses": {
+      "yuki_jp": true,
+      "haruto_jp": true,
+      "hana_jp": true
+    },
+    "resolution_responses": {},
+    "rebroadcast_history": [],
+    "last_broadcast_at": "2026-04-22T08:20:22.305569",
+    "remediation_actions": [
+      "Immediately revert the code changes that caused SRT unavailability",
+      "Verify Maxbill is functioning normally and processing billing correctly",
+      "Review change logs to identify what code modifications were applied",
+      "Implement mandatory code review process before deploying critical system changes"
+    ],
+    "impact_analysis": {
+      "affected_count": 3,
+      "total_users": 3,
+      "percentage_affected": 100.0,
+      "impact_level": "Critical",
+      "insights": [
+        "All responding users were affected by the SRT unavailability change",
+        "100% impact rate indicates a system-wide or critical service disruption",
+        "High severity classification combined with universal user impact suggests immediate remediation required"
+      ]
+    },
+    "report": "# Incident Report\n\n**Incident ID:** 19797DF3\n\n## Incident Summary\n\nSRT (Service Response Time) was automatically changed to unavailable due to unexpected code changes in the Maxbill billing system. This critical configuration change has rendered the service unavailable to all users.\n\n## Classification\n\n| Field | Value |\n|-------|-------|\n| **Category** | Application Issue |\n| **Severity** | High |\n| **Priority** | P1 |\n| **Reasoning** | Critical billing system affected by unexpected code changes marking SRT unavailable. Pre-defined high criticality requires immediate remediation to restore service. |\n\n## Impact Assessment\n\n| Metric | Value |\n|--------|-------|\n| **Users Affected** | 3 / 3 (100%) |\n| **Impact Level** | Critical |\n| **System Affected** | Maxbill (Billing) |\n\n### Key Insights\n\n- All responding users were affected by the SRT unavailability change\n- 100% impact rate indicates a system-wide or critical service disruption\n- High severity classification combined with universal user impact suggests immediate remediation required\n\n## Timeline\n\n| Event | Date & Time |\n|-------|------------|\n| **Incident Reported** | 2026-04-22 at 08:20:15 UTC |\n\n## Recommended Actions\n\n1. **Immediate Rollback** \u2014 Revert the code changes that marked SRT as unavailable to restore service to all affected users within the next 30 minutes.\n\n2. **Root Cause Analysis** \u2014 Investigate why automatic code changes were deployed to the billing system without proper review and approval controls.\n\n3. **Implement Change Controls** \u2014 Enforce mandatory code review and staging environment validation for all changes to critical billing systems before production deployment.\n\n4. **Verify Service Restoration** \u2014 Conduct comprehensive testing across all three user accounts to confirm SRT availability and billing system functionality post-deployment.\n\n5. **Post-Incident Review** \u2014 Schedule a post-incident review with the development and operations teams to address process gaps and prevent future unauthorized changes.\n\n## Status\n\n**Current Status:** Open\n\n**Assigned To:** Ashik (Team Lead)"
+  },
+  {
+    "id": "AF637236",
+    "task_number": "T7352",
+    "task_time": "20 Apr 2026 10:04 AM",
+    "title": "No job to review",
+    "description": "There are no jobs to review",
+    "markets": [
+      "ROW"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": "Volumes",
+    "team_lead": "Ashik",
+    "created_at": "2026-04-22T08:44:39.547178",
+    "updated_at": "2026-04-22T18:21:41.616098",
+    "status": "open",
+    "classification": {
+      "category": "Application Issue",
+      "severity": "Medium",
+      "priority": "P2",
+      "reasoning": "Job review queue is empty, indicating potential workflow stoppage or data processing failure affecting operations volume metrics.",
+      "remediation_actions": [
+        "Check job queue system status and database connectivity immediately",
+        "Review recent job submission logs for errors or failures",
+        "Verify data pipeline is generating and queuing jobs properly",
+        "Escalate to development team if jobs are not being created"
+      ]
+    },
+    "responses": {
+      "alex_row": true,
+      "riley_row": true,
+      "sam_row": true
+    },
+    "resolution_responses": {},
+    "rebroadcast_history": [],
+    "last_broadcast_at": "2026-04-22T08:44:46.573814",
+    "remediation_actions": [
+      "Check job queue system status and database connectivity immediately",
+      "Review recent job submission logs for errors or failures",
+      "Verify data pipeline is generating and queuing jobs properly",
+      "Escalate to development team if jobs are not being created"
+    ],
+    "impact_analysis": {
+      "affected_count": 3,
+      "total_users": 3,
+      "percentage_affected": 100.0,
+      "impact_level": "High",
+      "insights": [
+        "All users in scope are affected, indicating a systemic issue rather than isolated problem",
+        "100% impact rate combined with Medium severity classification suggests widespread access or workflow disruption",
+        "No job availability to review indicates potential process blockage affecting entire user group"
+      ]
+    },
+    "report": "# Incident Report\n\n**Incident ID:** AF637236\n\n---\n\n## Incident Summary\n\nThe job review queue is currently empty with no jobs available for review. This indicates a potential workflow stoppage or data processing failure that is preventing the review team from accessing work items.\n\n---\n\n## Classification\n\n| Field | Value |\n|-------|-------|\n| **Category** | Application Issue |\n| **Severity** | Medium |\n| **Priority** | P2 |\n| **Reasoning** | Job review queue is empty, indicating potential workflow stoppage or data processing failure affecting operations volume metrics. |\n\n---\n\n## Impact Assessment\n\n| Metric | Value |\n|--------|-------|\n| **Users Affected** | 3 / 3 (100%) |\n| **Impact Level** | High |\n| **Team Lead** | Ashik |\n| **Market** | N/A |\n\n### Key Insights\n\n- All users in scope are affected, indicating a systemic issue rather than an isolated problem\n- 100% impact rate combined with Medium severity classification suggests widespread access or workflow disruption\n- No job availability to review indicates potential process blockage affecting the entire user group\n\n---\n\n## Timeline\n\n| Event | Timestamp |\n|-------|-----------|\n| **Incident Reported** | 2026-04-22 at 08:44:39 UTC |\n\n---\n\n## Recommended Actions\n\n1. **Investigate Job Processing Pipeline** \u2014 Review job processing logs and data pipeline to identify why no jobs are being generated or queued for review. Check for failures in upstream systems or ETL processes.\n\n2. **Verify Data Source Connectivity** \u2014 Confirm that all data sources feeding into the job review queue are connected, accessible, and actively sending data without interruptions.\n\n3. **Check Queue System Status** \u2014 Validate the health and functionality of the job queue system itself, including database connectivity, message broker status, and queue management service logs.\n\n4. **Implement Alert Monitoring** \u2014 Establish automated alerts for empty job queues to detect similar issues earlier and reduce manual discovery time.\n\n5. **Document Root Cause & Implement Prevention** \u2014 Once resolved, document the root cause analysis and implement preventive measures or safeguards to prevent recurrence.\n\n---\n\n## Status\n\n**Current Status:** Open"
+  },
+  {
+    "id": "947FD709",
+    "task_number": "T12745",
+    "task_time": "06 Apr 2026 10:15 AM",
+    "title": "SAML Response SIgning  via Login Service Failed",
+    "description": "Login service not reflected and invalid credentials shown.",
+    "markets": [
+      "Japanese"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": "Maxbill",
+    "team_lead": "Ashik",
+    "created_at": "2026-04-22T19:56:06.582548",
+    "updated_at": "2026-04-23T12:07:00.653276",
+    "status": "open",
+    "classification": {
+      "category": "Access Issue",
+      "severity": "Critical",
+      "priority": "P1",
+      "reasoning": "SAML authentication failure prevents users from accessing the system, blocking all login functionality for the affected service with high pre-defined criticality.",
+      "remediation_actions": [
+        "Verify SAML signing certificates are valid and not expired",
+        "Check login service logs for specific SAML response validation errors",
+        "Validate SAML configuration matches identity provider settings",
+        "Restart login service and test authentication flow end-to-end"
+      ]
+    },
+    "responses": {
+      "yuki_jp": true,
+      "haruto_jp": true,
+      "hana_jp": false
+    },
+    "resolution_responses": {
+      "yuki_jp": true,
+      "haruto_jp": false
+    },
+    "rebroadcast_history": [
+      {
+        "at": "2026-04-22T21:41:05.170166",
+        "target_count": 2,
+        "targets": [
+          "yuki_jp",
+          "haruto_jp"
+        ],
+        "sent_by": "Ashik"
+      }
+    ],
+    "last_broadcast_at": "2026-04-22T21:41:05.170166",
+    "remediation_actions": [
+      "Verify SAML signing certificates are valid and not expired",
+      "Check login service logs for specific SAML response validation errors",
+      "Validate SAML configuration matches identity provider settings",
+      "Restart login service and test authentication flow end-to-end"
+    ],
+    "impact_analysis": null,
+    "report": null
+  },
+  {
+    "id": "1FF21E01",
+    "task_number": "T3243248",
+    "task_time": "07 Apr 2026 09:17 PM",
+    "title": "Taking long time to load video/photo/audio",
+    "description": "Delays in rendering the multi media.",
+    "markets": [
+      "Sri Lankan",
+      "Vietnamese",
+      "Cambodian"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM",
+      "MESSENGER",
+      "IDVAAS HALO",
+      "IDVASS",
+      "IGPO",
+      "PI",
+      "MULTI-SKILL"
+    ],
+    "metric": [
+      "AHT"
+    ],
+    "team_lead": "Ashik",
+    "created_at": "2026-04-23T01:31:13.277284",
+    "updated_at": "2026-04-29T09:43:13.714926",
+    "status": "open",
+    "classification": {
+      "category": "Performance Issue",
+      "severity": "Medium",
+      "priority": "P2",
+      "reasoning": "Multimedia rendering delays directly impact user experience and increase handling time, with Medium criticality affecting service quality but not causing complete unavailability.",
+      "remediation_actions": [
+        "Check CDN and media server response times and connectivity status",
+        "Review current system resource utilization for CPU, memory, and bandwidth",
+        "Analyze recent code deployments or configuration changes affecting multimedia",
+        "Engage infrastructure team to optimize caching and delivery pipeline"
+      ]
+    },
+    "responses": {
+      "nimal_lk": true,
+      "kumari_lk": true,
+      "ruwan_lk": true,
+      "dilani_lk": true,
+      "chamara_lk": true,
+      "priya_lk": false,
+      "saman_lk": true,
+      "thilini_lk": true,
+      "arjuna_lk": true,
+      "malika_lk": false,
+      "nguyen_vn": false,
+      "tran_vn": true,
+      "pham_vn": true,
+      "hoang_vn": true,
+      "do_vn": true,
+      "vu_vn": true,
+      "dang_vn": true,
+      "bui_vn": true,
+      "dao_vn": true,
+      "sophea_kh": true
+    },
+    "resolution_responses": {},
+    "rebroadcast_history": [],
+    "last_broadcast_at": "2026-04-23T01:31:21.368735",
+    "remediation_actions": [
+      "Check CDN and media server response times and connectivity status",
+      "Review current system resource utilization for CPU, memory, and bandwidth",
+      "Analyze recent code deployments or configuration changes affecting multimedia",
+      "Engage infrastructure team to optimize caching and delivery pipeline"
+    ],
+    "impact_analysis": null,
+    "report": null
+  },
+  {
+    "id": "T43542",
+    "task_number": "T43542",
+    "task_time": "21 Apr 2026 10:26 AM",
+    "title": "Widget failed to load",
+    "description": "Widget load for IGPR is failing even after reloading.",
+    "markets": [
+      "Japanese"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Other"
+    ],
+    "team_lead": "Ashik",
+    "created_at": "2026-04-23T11:27:32.196583",
+    "updated_at": "2026-04-23T11:27:32.240847",
+    "status": "logged",
+    "classification": {
+      "severity": "Low",
+      "category": "Operational",
+      "priority": "Low",
+      "reasoning": "Logged without broadcast \u2014 fewer than 5 reviewers impacted."
+    },
+    "responses": {},
+    "resolution_responses": {},
+    "rebroadcast_history": [],
+    "last_broadcast_at": null,
+    "remediation_actions": [],
+    "impact_analysis": null,
+    "report": null,
+    "log_only": true
+  },
+  {
+    "id": "T324238",
+    "task_number": "T324238",
+    "task_time": "22 Apr 2026 07:15 PM",
+    "title": "Reviewers machine login issue",
+    "description": "Machines not responding and cannot access and sign in.",
+    "markets": [
+      "Japanese"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Other"
+    ],
+    "team_lead": "Ashik",
+    "created_at": "2026-04-23T11:31:26.763254",
+    "updated_at": "2026-04-23T11:31:26.812285",
+    "status": "logged",
+    "classification": {
+      "severity": "Low",
+      "category": "Operational",
+      "priority": "Low",
+      "reasoning": "Logged without broadcast \u2014 fewer than 5 reviewers impacted."
+    },
+    "responses": {},
+    "resolution_responses": {},
+    "rebroadcast_history": [],
+    "last_broadcast_at": null,
+    "remediation_actions": [],
+    "impact_analysis": null,
+    "report": null,
+    "log_only": true
+  },
+  {
+    "id": "T543423",
+    "task_number": "T543423",
+    "task_time": "22 Apr 2026 10:31 PM",
+    "title": "Reviewer not able to login Supernova",
+    "description": "Cannot login the machine delaying check in and check out time.",
+    "markets": [
+      "Japanese"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Maxbill"
+    ],
+    "team_lead": "Ashik",
+    "created_at": "2026-04-23T12:03:31.801183",
+    "updated_at": "2026-04-23T12:06:56.556995",
+    "status": "open",
+    "classification": null,
+    "responses": {
+      "yuki_jp": true,
+      "haruto_jp": true,
+      "hana_jp": true
+    },
+    "resolution_responses": {},
+    "rebroadcast_history": [],
+    "last_broadcast_at": "2026-04-23T12:03:33.427190",
+    "remediation_actions": [],
+    "impact_analysis": null,
+    "report": null
+  },
+  {
+    "id": "T32483",
+    "task_number": "T32483",
+    "task_time": "16 Apr 2026 09:24 PM",
+    "title": "SRT automatically changes code",
+    "description": "Change code",
+    "markets": [
+      "Japanese",
+      "ROW",
+      "Korean",
+      "Mandarin",
+      "Malay",
+      "Cambodian",
+      "Thai",
+      "Vietnamese",
+      "Sri Lankan"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Maxbill",
+      "Utilization"
+    ],
+    "team_lead": "Ashik",
+    "created_at": "2026-04-23T14:53:52.003787",
+    "updated_at": "2026-04-29T10:33:07.422380",
+    "status": "open",
+    "classification": null,
+    "responses": {
+      "alex_row": true,
+      "riley_row": false,
+      "yuki_jp": false,
+      "yuna_kr": true
+    },
+    "resolution_responses": {
+      "alex_row": true
+    },
+    "rebroadcast_history": [
+      {
+        "at": "2026-04-23T16:25:07.084297",
+        "target_count": 1,
+        "targets": [
+          "alex_row"
+        ],
+        "sent_by": "Ashik"
+      }
+    ],
+    "last_broadcast_at": "2026-04-23T16:25:07.084297",
+    "remediation_actions": [],
+    "impact_analysis": null,
+    "report": null
+  },
+  {
+    "id": "T2834822",
+    "task_number": "T2834822",
+    "task_time": "26 Apr 2026 06:23 PM",
+    "title": "No jobs recieved",
+    "description": "No jobs to moderate in pipeline.",
+    "markets": [
+      "Korean"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Volumes"
+    ],
+    "team_lead": "Ashik",
+    "created_at": "2026-04-27T20:18:48.979523",
+    "updated_at": "2026-04-29T08:32:39.470506",
+    "status": "open",
+    "classification": null,
+    "responses": {
+      "jisoo_kr": true,
+      "hyunjin_kr": true,
+      "yuna_kr": true
+    },
+    "resolution_responses": {
+      "jisoo_kr": false,
+      "hyunjin_kr": true,
+      "yuna_kr": true
+    },
+    "rebroadcast_history": [
+      {
+        "at": "2026-04-27T20:48:56.473657",
+        "target_count": 3,
+        "targets": [
+          "jisoo_kr",
+          "hyunjin_kr",
+          "yuna_kr"
+        ],
+        "sent_by": "Ashik"
+      },
+      {
+        "at": "2026-04-29T00:29:49.425377",
+        "target_count": 3,
+        "targets": [
+          "jisoo_kr",
+          "hyunjin_kr",
+          "yuna_kr"
+        ],
+        "sent_by": "Areeya"
+      }
+    ],
+    "last_broadcast_at": "2026-04-29T00:29:49.425377",
+    "remediation_actions": [],
+    "impact_analysis": {
+      "affected_count": 3,
+      "total_users": 3,
+      "percentage_affected": 100.0,
+      "impact_level": "Critical",
+      "insights": [
+        "All responding users are affected by job reception failure",
+        "Complete service disruption indicated by 100% impact rate",
+        "Limited response pool suggests isolated system or small user segment impacted"
+      ]
+    },
+    "report": "# Incident Report: No Jobs Received\n\n## Incident Summary\n\nNo jobs are being received in the moderation pipeline. The system is not processing or delivering moderation tasks to the queue, resulting in a complete work stoppage for affected users.\n\n## Classification\n\n| Attribute | Value |\n|-----------|-------|\n| Category | Service Disruption |\n| Severity | Critical |\n| Priority | P1 - Urgent |\n| Incident ID | T2834822 |\n\n## Impact Assessment\n\n| Metric | Value |\n|--------|-------|\n| Users Affected | 3 / 3 (100%) |\n| Impact Level | Critical |\n| Service Status | Complete Disruption |\n\n### Key Insights\n- All responding users are affected by job reception failure\n- Complete service disruption indicated by 100% impact rate\n- Limited response pool suggests isolated system or small user segment impacted\n\n## Timeline\n\n| Event | Timestamp |\n|-------|-----------|\n| Incident Reported | 2026-04-27 20:18:48 UTC |\n| Team Lead Notified | Ashik |\n\n## Recommended Actions\n\n1. **Immediate Investigation** \u2014 Investigate job pipeline ingestion system to identify root cause of job reception failure. Check job queue status, database connectivity, and pipeline service logs.\n\n2. **Pipeline Service Health Check** \u2014 Verify all moderation pipeline services are running and responsive. Restart any failed services and confirm normal operation.\n\n3. **Job Queue Analysis** \u2014 Audit the job queue for stuck, failed, or malformed jobs that may be blocking new job intake. Clear any blocking issues.\n\n4. **Communication & Updates** \u2014 Notify affected team members of incident status and provide regular updates on resolution progress.\n\n5. **Post-Incident Review** \u2014 Conduct root cause analysis once resolved and implement preventative monitoring/alerting to detect similar failures early.\n\n## Status\n\n**Current Status:** Open\n\n**Assigned To:** Ashik (Team Lead)"
+  },
+  {
+    "id": "T23452",
+    "task_number": "T23452",
+    "task_time": "28 Apr 2026 05:11 PM",
+    "title": "Loading content issue with three different types of errors",
+    "description": "Three errors such as No jobs to review, timeout and stuck page.",
+    "markets": [
+      "Japanese",
+      "Malay",
+      "Cambodian",
+      "ROW",
+      "Korean",
+      "Mandarin",
+      "Thai",
+      "Vietnamese",
+      "Sri Lankan"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Volumes"
+    ],
+    "team_lead": "Areeya",
+    "created_at": "2026-04-29T08:45:50.447138",
+    "updated_at": "2026-05-08T11:11:10.300342",
+    "status": "resolved",
+    "classification": {
+      "category": "Application Issue",
+      "severity": "High",
+      "priority": "P2",
+      "reasoning": "Multiple concurrent error types (no jobs, timeout, stuck page) indicate systemic application dysfunction affecting content loading and user experience, compounded by medium criticality volume impact.",
+      "remediation_actions": [
+        "Immediately check application server logs for timeout and loading errors",
+        "Verify database connectivity and job queue status for availability",
+        "Restart affected services and monitor recovery metrics closely",
+        "Communicate status to stakeholders and establish ETA for resolution"
+      ]
+    },
+    "responses": {
+      "alex_row": true,
+      "riley_row": true,
+      "sam_row": true,
+      "yuki_jp": false,
+      "haruto_jp": true,
+      "hana_jp": true,
+      "jisoo_kr": true,
+      "hyunjin_kr": true,
+      "yuna_kr": true,
+      "wei_cn": false,
+      "ming_cn": true,
+      "xiao_cn": true,
+      "ahmad_my": true,
+      "wei_my": true,
+      "hafiz_my": true,
+      "somchai_th": true,
+      "prayuth_th": true,
+      "kanya_th": true,
+      "nguyen_vn": true,
+      "nimal_lk": true
+    },
+    "resolution_responses": {},
+    "rebroadcast_history": [],
+    "last_broadcast_at": "2026-04-29T08:45:58.140811",
+    "remediation_actions": [
+      "Immediately check application server logs for timeout and loading errors",
+      "Verify database connectivity and job queue status for availability",
+      "Restart affected services and monitor recovery metrics closely",
+      "Communicate status to stakeholders and establish ETA for resolution"
+    ],
+    "impact_analysis": {
+      "affected_count": 17,
+      "total_users": 19,
+      "percentage_affected": 89.5,
+      "impact_level": "Critical",
+      "insights": [
+        "Nearly 90% of users impacted indicates widespread system failure affecting core content loading functionality",
+        "Multiple error types suggest systemic issues rather than isolated problems, requiring comprehensive investigation",
+        "High severity classification combined with extreme user impact warrants immediate escalation and incident response activation"
+      ]
+    },
+    "report": "# Incident Report\n\n**Incident ID:** T23452\n\n## Incident Summary\n\nA critical content loading issue affected the application with three concurrent error types: \"No jobs to review,\" timeout errors, and stuck page states. This systemic dysfunction prevented users from accessing and reviewing content, resulting in widespread service degradation.\n\n## Classification\n\n| Field | Value |\n|-------|-------|\n| **Category** | Application Issue |\n| **Severity** | High |\n| **Priority** | P2 |\n\n**Reasoning:** Multiple concurrent error types indicate systemic application dysfunction affecting content loading and user experience. The combination of distinct failure modes suggests deeper infrastructure or application logic issues requiring immediate investigation.\n\n## Impact Assessment\n\n| Metric | Value |\n|--------|-------|\n| **Users Affected** | 17 / 19 (89.5%) |\n| **Impact Level** | Critical |\n\n**Key Insights:**\n- Nearly 90% of user base impacted indicates widespread system failure affecting core content loading functionality\n- Multiple error types (no jobs, timeout, stuck page) suggest systemic issues rather than isolated problems, requiring comprehensive investigation\n- High severity classification combined with extreme user impact warrants immediate escalation and incident response activation\n\n## Timeline\n\n| Event | Date & Time |\n|-------|------------|\n| **Incident Reported** | 2026-04-29 at 08:45:50 UTC |\n\n## Recommended Actions\n\n1. **Conduct root cause analysis** \u2014 Investigate application logs and infrastructure metrics to identify the common cause linking the three error types (no jobs, timeouts, stuck pages)\n\n2. **Review job queue and content loading service** \u2014 Audit the backend service responsible for loading and serving content to identify bottlenecks, race conditions, or resource exhaustion\n\n3. **Implement monitoring and alerting** \u2014 Deploy enhanced monitoring for content loading latency, job queue status, and page responsiveness to detect similar issues earlier\n\n4. **Validate application state management** \u2014 Review code responsible for managing page state transitions to prevent future \"stuck page\" scenarios\n\n5. **Document incident response procedures** \u2014 Create post-incident documentation and update runbooks to improve response time for similar multi-error incidents\n\n## Status\n\n**Resolved**"
+  },
+  {
+    "id": "T132434",
+    "task_number": "T132434",
+    "task_time": "21 Apr 2026 06:23 PM",
+    "title": "Showing as \"Production\" but it recorded as \"unavailable\"",
+    "description": "Changing code within few minutes of access",
+    "markets": [
+      "Japanese",
+      "Korean"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Utilization",
+      "Maxbill"
+    ],
+    "team_lead": "Areeya",
+    "created_at": "2026-04-29T10:12:26.491421",
+    "updated_at": "2026-04-29T17:47:10.881655",
+    "status": "open",
+    "classification": {
+      "category": "Application Issue",
+      "severity": "High",
+      "priority": "P2",
+      "reasoning": "Production system showing unavailable status with rapid code changes affecting billing metrics indicates potential deployment issue or unauthorized access impacting revenue tracking.",
+      "remediation_actions": [
+        "Immediately roll back recent code changes to last known stable version",
+        "Verify system availability and billing metric accuracy in production",
+        "Review access logs for unauthorized code modifications in past hours",
+        "Conduct post-incident review of deployment controls and change procedures"
+      ]
+    },
+    "responses": {
+      "yuki_jp": true,
+      "haruto_jp": true,
+      "hana_jp": true,
+      "jisoo_kr": false,
+      "hyunjin_kr": true,
+      "yuna_kr": false
+    },
+    "resolution_responses": {
+      "hyunjin_kr": true,
+      "yuki_jp": true
+    },
+    "rebroadcast_history": [
+      {
+        "at": "2026-04-29T10:32:33.714124",
+        "target_count": 4,
+        "targets": [
+          "yuki_jp",
+          "haruto_jp",
+          "hana_jp",
+          "hyunjin_kr"
+        ],
+        "sent_by": "Areeya"
+      }
+    ],
+    "last_broadcast_at": "2026-04-29T10:32:33.714124",
+    "remediation_actions": [
+      "Immediately roll back recent code changes to last known stable version",
+      "Verify system availability and billing metric accuracy in production",
+      "Review access logs for unauthorized code modifications in past hours",
+      "Conduct post-incident review of deployment controls and change procedures"
+    ],
+    "impact_analysis": {
+      "affected_count": 4,
+      "total_users": 6,
+      "percentage_affected": 66.7,
+      "impact_level": "High",
+      "insights": [
+        "Two-thirds of respondents experienced unavailability despite production status indicator",
+        "High severity classification with 66.7% affected rate indicates significant operational disruption",
+        "Status display discrepancy suggests potential monitoring or alerting system failure"
+      ]
+    },
+    "report": "# Incident Report T132434\n\n## Incident Summary\n\nA production system is displaying an operational status while simultaneously recording as unavailable. Rapid code changes occurring within minutes of access are compounding the issue, creating a critical mismatch between status indicators and actual system availability. This discrepancy directly impacts billing metrics and revenue tracking systems.\n\n## Classification\n\n| Field | Value |\n|-------|-------|\n| **Category** | Application Issue |\n| **Severity** | High |\n| **Priority** | P2 |\n| **Reported By** | Areeya (Team Lead) |\n\n**Reasoning:** Production system showing unavailable status with rapid code changes affecting billing metrics indicates potential deployment issue or unauthorized access impacting revenue tracking.\n\n## Impact Assessment\n\n| Metric | Value |\n|--------|-------|\n| **Users Affected** | 4 of 6 (66.7%) |\n| **Impact Level** | High |\n| **Operational Status** | Degraded |\n\n### Key Insights\n\n- Two-thirds of respondents experienced unavailability despite production status indicator showing operational\n- High severity classification with 66.7% affected rate indicates significant operational disruption\n- Status display discrepancy suggests potential monitoring or alerting system failure\n- Rapid code modifications within minutes of access raises concerns about deployment controls or unauthorized changes\n\n## Timeline\n\n| Timestamp | Event |\n|-----------|-------|\n| **2026-04-29 10:12:26** | Incident reported by Team Lead Areeya |\n\n## Recommended Actions\n\n1. **Immediate Status Verification** \u2014 Conduct a comprehensive health check of the production environment to verify actual system availability and reconcile discrepancies between status indicators and user-reported outages\n\n2. **Code Change Audit** \u2014 Investigate all code modifications made in the past 2 hours; identify who made changes, what was modified, and whether changes were properly authorized and deployed through standard procedures\n\n3. **Monitoring System Review** \u2014 Audit monitoring and alerting systems to identify why production status is displaying incorrectly; verify all metrics are accurately reflecting true system state\n\n4. **Access Control Assessment** \u2014 Review access logs for the affected period to determine if unauthorized changes were made; implement additional controls if access restrictions were bypassed\n\n5. **Billing Metrics Validation** \u2014 Audit billing and revenue tracking systems for potential data corruption or loss during the unavailability window; implement corrective transactions if necessary\n\n## Status\n\n**Current Status:** Open\n\n**Next Steps:** Assign incident to on-call engineer for immediate investigation; escalate to security team if unauthorized access is suspected."
+  },
+  {
+    "id": "T233522",
+    "task_number": "T233522",
+    "task_time": "28 Apr 2026 09:21 PM",
+    "title": "No jobs to review in Queue",
+    "description": "No further jobs in the pipeline",
+    "markets": [
+      "Malay"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "PI",
+      "CM"
+    ],
+    "metric": [
+      "Decision AHT"
+    ],
+    "team_lead": "Areeya",
+    "created_at": "2026-04-29T18:52:07.440340",
+    "updated_at": "2026-05-08T11:04:35.633135",
+    "status": "open",
+    "classification": {
+      "category": "Application Issue",
+      "severity": "Medium",
+      "priority": "P2",
+      "reasoning": "Pipeline queue depletion impacts decision processing workflow with medium criticality. Single affected metric and operational nature support medium severity classification.",
+      "remediation_actions": [
+        "Check job submission systems for blockages or failures",
+        "Verify pipeline configuration and scheduling is functioning correctly",
+        "Review recent logs for errors affecting job queue population",
+        "Coordinate with upstream teams to resume job intake"
+      ]
+    },
+    "responses": {
+      "ahmad_my": true,
+      "wei_my": true,
+      "farah_my": true,
+      "hafiz_my": false,
+      "azrul_my": true
+    },
+    "resolution_responses": {
+      "ahmad_my": true,
+      "wei_my": true,
+      "farah_my": true,
+      "azrul_my": true
+    },
+    "rebroadcast_history": [
+      {
+        "at": "2026-05-08T11:01:52.444824",
+        "target_count": 4,
+        "targets": [
+          "ahmad_my",
+          "wei_my",
+          "farah_my",
+          "azrul_my"
+        ],
+        "sent_by": "Areeya"
+      }
+    ],
+    "last_broadcast_at": "2026-05-08T11:01:52.444824",
+    "remediation_actions": [
+      "Check job submission systems for blockages or failures",
+      "Verify pipeline configuration and scheduling is functioning correctly",
+      "Review recent logs for errors affecting job queue population",
+      "Coordinate with upstream teams to resume job intake"
+    ],
+    "impact_analysis": {
+      "affected_count": 4,
+      "total_users": 5,
+      "percentage_affected": 80.0,
+      "impact_level": "High",
+      "insights": [
+        "80% user response rate indicates widespread awareness of the queue issue",
+        "High concentration of affected users suggests systemic problem rather than isolated case",
+        "Queue backlog is preventing job processing for majority of team members"
+      ]
+    },
+    "report": "# Incident Report\n\n## Incident Summary\n\nThe job review queue in the application pipeline has been depleted, resulting in no available jobs for team members to process. This has halted the decision processing workflow and is impacting operational productivity across the team.\n\n## Classification\n\n| Field | Value |\n|-------|-------|\n| **Category** | Application Issue |\n| **Severity** | Medium |\n| **Priority** | P2 |\n| **Incident ID** | T233522 |\n\n**Reasoning:** Pipeline queue depletion impacts decision processing workflow with medium criticality. Single affected metric and operational nature support medium severity classification.\n\n## Impact Assessment\n\n| Metric | Value |\n|--------|-------|\n| **Users Affected** | 4 out of 5 (80%) |\n| **Impact Level** | High |\n\n**Key Insights:**\n- 80% user response rate indicates widespread awareness of the queue issue\n- High concentration of affected users suggests systemic problem rather than isolated case\n- Queue backlog is preventing job processing for majority of team members\n\n## Timeline\n\n| Event | Time |\n|-------|------|\n| **Incident Reported** | 2026-04-29 at 18:52:07 UTC |\n| **Team Lead Assigned** | Areeya |\n\n## Recommended Actions\n\n1. **Investigate queue population mechanism** \u2014 Review the job ingestion pipeline to identify why new jobs are not being added to the queue. Check data sources, ETL processes, and upstream dependencies.\n\n2. **Implement queue monitoring alerts** \u2014 Deploy automated alerts to notify the team when queue depth falls below critical thresholds to enable faster detection of similar issues.\n\n3. **Establish manual job intake procedure** \u2014 Create an interim process for manually adding jobs to the queue to restore workflow continuity while investigating root cause.\n\n4. **Audit recent system changes** \u2014 Review deployment logs, configuration changes, and system updates from the past 24-48 hours that may have affected queue operations.\n\n5. **Conduct post-incident review** \u2014 After resolution, schedule a retrospective meeting with the team to document lessons learned and implement preventive measures.\n\n## Status\n\n**Current Status:** Open"
+  },
+  {
+    "id": "T32904320",
+    "task_number": "T32904320",
+    "task_time": "07 May 2026 03:04 PM",
+    "title": "Video stop playing in the middle",
+    "description": "The videos stop halfway.",
+    "markets": [
+      "Japanese",
+      "Sri Lankan"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "AHT"
+    ],
+    "team_lead": "Areeya",
+    "created_at": "2026-05-08T11:09:22.918136",
+    "updated_at": "2026-05-08T11:11:23.605544",
+    "status": "open",
+    "classification": {
+      "category": "Application Issue",
+      "severity": "Medium",
+      "priority": "P2",
+      "reasoning": "Videos stopping mid-playback indicates an application-level streaming failure affecting user experience. Single metric impact with medium criticality suggests this is important but not critical.",
+      "remediation_actions": [
+        "Check video streaming service logs for errors or timeouts",
+        "Verify video player application version and recent deployments",
+        "Test video playback across multiple browsers and devices",
+        "Review CDN health and content delivery performance metrics"
+      ]
+    },
+    "responses": {
+      "nimal_lk": true
+    },
+    "resolution_responses": {},
+    "rebroadcast_history": [],
+    "last_broadcast_at": "2026-05-08T11:09:27.405935",
+    "remediation_actions": [
+      "Check video streaming service logs for errors or timeouts",
+      "Verify video player application version and recent deployments",
+      "Test video playback across multiple browsers and devices",
+      "Review CDN health and content delivery performance metrics"
+    ],
+    "impact_analysis": null,
+    "report": null
+  },
+  {
+    "id": "T3294232",
+    "task_number": "T3294232",
+    "task_time": "06 May 2026 09:16 PM",
+    "title": "Unable to login into machine",
+    "description": "Machines cannot be used.",
+    "markets": [
+      "Vietnamese"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Maxbill"
+    ],
+    "team_lead": "Areeya",
+    "created_at": "2026-05-08T11:13:47.408341",
+    "updated_at": "2026-05-08T11:13:50.796400",
+    "status": "open",
+    "classification": {
+      "category": "Access Issue",
+      "severity": "High",
+      "priority": "P1",
+      "reasoning": "Users cannot access machines, preventing work on a high-criticality system (Maxbill). This is a complete access blockage affecting operational capability.",
+      "remediation_actions": [
+        "Verify authentication service status and restart if necessary",
+        "Check user account permissions and group memberships",
+        "Review recent access control or security policy changes",
+        "Escalate to identity management team if local fixes fail"
+      ]
+    },
+    "responses": {},
+    "resolution_responses": {},
+    "rebroadcast_history": [],
+    "last_broadcast_at": "2026-05-08T11:13:50.750410",
+    "remediation_actions": [
+      "Verify authentication service status and restart if necessary",
+      "Check user account permissions and group memberships",
+      "Review recent access control or security policy changes",
+      "Escalate to identity management team if local fixes fail"
+    ],
+    "impact_analysis": null,
+    "report": null
+  }
+]

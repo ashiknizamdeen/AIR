@@ -1,0 +1,59 @@
+[
+  {
+    "news_id": "F6F20AAC",
+    "title": "New regulatory reporting deadline issued for Q3 compliance submissions",
+    "description": "The financial regulatory authority has issued an emergency directive requiring all operations teams to submit Q3 compliance reports by end of this week. Non-submission may result in regulatory penalties and audit flags. Team leads must confirm receipt and coordinate with their compliance officers immediately.",
+    "market": "Vietnam",
+    "team_lead": "TL_Vietnam",
+    "classification": {
+      "risk_level": "Medium",
+      "category": "Other",
+      "reasoning": "Classification unavailable."
+    },
+    "created_at": "2026-04-19T04:24:40.270838",
+    "acknowledged_by": [
+      "nguyen_vn",
+      "tran_vn",
+      "le_vn",
+      "pham_vn",
+      "hoang_vn"
+    ]
+  },
+  {
+    "news_id": "913C009D",
+    "title": "Earthquake around be alert",
+    "description": "Be careful",
+    "market": "Mandarin, Cambodian, Japanese, Vietnamese, Thai",
+    "team_lead": "Ashik",
+    "classification": {
+      "risk_level": "Medium",
+      "category": "Other",
+      "reasoning": "Classification unavailable."
+    },
+    "created_at": "2026-04-22T22:36:38.676872",
+    "acknowledged_by": [
+      "wei_cn",
+      "nguyen_vn",
+      "tran_vn",
+      "pham_vn",
+      "hoang_vn",
+      "do_vn",
+      "vu_vn",
+      "dang_vn",
+      "bui_vn",
+      "dao_vn",
+      "somchai_th",
+      "nattaya_th",
+      "prayuth_th",
+      "siriporn_th",
+      "wanchai_th",
+      "yuki_jp",
+      "haruto_jp",
+      "hana_jp",
+      "sota_jp",
+      "ming_cn",
+      "xiao_cn",
+      "kanya_th"
+    ]
+  }
+]

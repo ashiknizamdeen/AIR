@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(winget install:*)",
+      "Bash(/c/Users/Ashik's/AppData/Local/Programs/Python/Python312/python.exe:*)",
+      "WebFetch(domain:support.claude.com)",
+      "Bash(pip show *)",
+      "Bash(streamlit run *)",
+      "Bash(python -m streamlit run app.py)",
+      "Bash(python -c \"import app\")",
+      "Bash(python -c \" import re with open\\('app.py'\\) as f: content = f.read\\(\\) m = re.search\\(r'def metric_card.*?\\(?=\\\\ndef |\\\\Z\\)', content, re.DOTALL\\) if m: print\\(m.group\\(\\)[:600]\\) \")",
+      "Bash(python *)",
+      "Bash(python3 *)"
+    ]
+  }
+}
