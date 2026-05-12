@@ -3,3 +3,4 @@ anthropic
 Pillow
 markdown
 xhtml2pdf
+plotly
