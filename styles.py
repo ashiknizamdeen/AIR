@@ -1691,18 +1691,18 @@ def render_footer():
     </style>
 
     <div class="ir-footer">
-        <div style="flex:1;"></div>
+        <div style="flex:1;display:flex;justify-content:flex-start;align-items:center;">
+            <a href="?portal=reviewer" target="_blank" class="ir-footer-reviewer-btn">
+                Reviewer Portal →
+            </a>
+        </div>
         <div class="ir-footer-center">
             <span class="ir-footer-label">Powered by</span>
             <span class="ir-footer-brand">BKK IO VVO Innovation</span>
             <span class="ir-footer-sep">|</span>
             <span class="ir-footer-year">House of Odyssey 2026</span>
         </div>
-        <div style="flex:1;display:flex;justify-content:flex-end;align-items:center;">
-            <a href="?portal=reviewer" target="_blank" class="ir-footer-reviewer-btn">
-                Reviewer Portal →
-            </a>
-        </div>
+        <div style="flex:1;"></div>
     </div>
     """, unsafe_allow_html=True)
 
