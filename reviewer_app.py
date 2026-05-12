@@ -18,7 +18,7 @@ from storage import (
 from styles import inject_styles, render_footer, fix_sidebar_padding
 
 # ── Page config ────────────────────────────────────────────────────────────────
-_logo_img = Image.open(os.path.join(os.path.dirname(__file__), "air.png"))
+_logo_img = Image.open(os.path.join(os.path.dirname(__file__), "Air.png"))
 st.set_page_config(
     page_title="SRT — Reviewer Portal",
     page_icon=_logo_img,

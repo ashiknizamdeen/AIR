@@ -28,7 +28,7 @@ from agents.report import generate_report
 from styles import inject_styles, render_navbar, render_footer, fix_sidebar_padding, _logo_base64
 
 # ── Page config ────────────────────────────────────────────────────────────────
-_logo_img = Image.open(os.path.join(os.path.dirname(__file__), "air.png"))
+_logo_img = Image.open(os.path.join(os.path.dirname(__file__), "Air.png"))
 st.set_page_config(
     page_title="Incident Response System",
     page_icon=_logo_img,
