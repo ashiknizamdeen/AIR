@@ -1,7 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import base64, json, os, sys
-from PIL import Image
 
 sys.path.insert(0, os.path.dirname(__file__))
 
@@ -15,60 +14,8 @@ from storage import (
     acknowledge_news,
     mark_news_acknowledged,
 )
-from styles import inject_styles, render_footer, fix_sidebar_padding
+from styles import fix_sidebar_padding
 
-# ── Page config ────────────────────────────────────────────────────────────────
-_logo_img = Image.open(os.path.join(os.path.dirname(__file__), "Air.png"))
-st.set_page_config(
-    page_title="SRT — Reviewer Portal",
-    page_icon=_logo_img,
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={},
-)
-
-inject_styles()
-render_footer()
-fix_sidebar_padding()
-
-st.html("""
-<style>
-section[data-testid="stMain"] {
-    margin-left: var(--sidebar-w, 320px) !important;
-    width: calc(100vw - var(--sidebar-w, 320px)) !important;
-    max-width: calc(100vw - var(--sidebar-w, 320px)) !important;
-}
-[data-testid="stMainBlockContainer"],
-.block-container {
-    padding-top: 88px !important;
-    padding-left: 2.5rem !important;
-    padding-right: 2.5rem !important;
-    max-width: 100% !important;
-}
-</style>
-""")
-
-# ── Session state ──────────────────────────────────────────────────────────────
-for key, default in [
-    ("rev_market",    MARKETS[0]),
-    ("rev_username",  None),
-    ("open_notif",              None),
-    ("responded_msg",           None),
-    ("popup_expanded",          False),
-    ("incident_popup_expanded", None),
-    ("navbar_open",   False),
-    ("_slot0_triggered",        None),
-    ("_slot1_triggered",        None),
-    ("_overflow_triggered",     False),
-    ("_pending_open_notif",     None),
-]:
-    if key not in st.session_state:
-        st.session_state[key] = default
-
-if st.session_state.rev_username is None:
-    first = MARKET_REVIEWERS.get(st.session_state.rev_market, [])
-    if first:
-        st.session_state.rev_username = first[0]
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -236,6 +183,7 @@ def render_sidebar():
                 '✓ All caught up</div>',
                 unsafe_allow_html=True,
             )
+
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -1380,10 +1328,49 @@ def render_body():
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# ENTRY POINT
+# PUBLIC ENTRY POINT (called by app.py)
 # ══════════════════════════════════════════════════════════════════════════════
 
-render_navbar()
-render_sidebar()
-render_body()
-render_nav_dropdown()
+def run_reviewer_portal():
+    fix_sidebar_padding()
+    st.html("""
+<style>
+section[data-testid="stMain"] {
+    margin-left: var(--sidebar-w, 320px) !important;
+    width: calc(100vw - var(--sidebar-w, 320px)) !important;
+    max-width: calc(100vw - var(--sidebar-w, 320px)) !important;
+}
+[data-testid="stMainBlockContainer"],
+.block-container {
+    padding-top: 88px !important;
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+    max-width: 100% !important;
+}
+</style>
+""")
+    for key, default in [
+        ("rev_market",              MARKETS[0]),
+        ("rev_username",            None),
+        ("open_notif",              None),
+        ("responded_msg",           None),
+        ("popup_expanded",          False),
+        ("incident_popup_expanded", None),
+        ("navbar_open",             False),
+        ("_slot0_triggered",        None),
+        ("_slot1_triggered",        None),
+        ("_overflow_triggered",     False),
+        ("_pending_open_notif",     None),
+    ]:
+        if key not in st.session_state:
+            st.session_state[key] = default
+
+    if st.session_state.rev_username is None:
+        first = MARKET_REVIEWERS.get(st.session_state.rev_market, [])
+        if first:
+            st.session_state.rev_username = first[0]
+
+    render_navbar()
+    render_sidebar()
+    render_body()
+    render_nav_dropdown()

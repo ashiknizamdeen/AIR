@@ -1608,10 +1608,36 @@ def render_footer():
         border-top: 1px solid var(--border);
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         gap: 8px;
         padding: 0 24px;
         animation: _footerFadeIn 0.6s ease 0.4s both;
+    }
+    .ir-footer-center {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .ir-footer-reviewer-btn {
+        font-size: 0.6rem;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.05em;
+        color: #A100FF;
+        text-decoration: none;
+        border: 1px solid #A100FF;
+        border-radius: 4px;
+        padding: 3px 10px;
+        white-space: nowrap;
+        transition: background 0.18s, color 0.18s;
+        flex-shrink: 0;
+    }
+    .ir-footer-reviewer-btn:hover {
+        background: #A100FF;
+        color: #fff;
     }
     .ir-footer-label {
         font-size: 0.6rem;
@@ -1665,10 +1691,18 @@ def render_footer():
     </style>
 
     <div class="ir-footer">
-        <span class="ir-footer-label">Powered by</span>
-        <span class="ir-footer-brand">BKK IO VVO Innovation</span>
-        <span class="ir-footer-sep">|</span>
-        <span class="ir-footer-year">House of Odyssey 2026</span>
+        <div style="flex:1;"></div>
+        <div class="ir-footer-center">
+            <span class="ir-footer-label">Powered by</span>
+            <span class="ir-footer-brand">BKK IO VVO Innovation</span>
+            <span class="ir-footer-sep">|</span>
+            <span class="ir-footer-year">House of Odyssey 2026</span>
+        </div>
+        <div style="flex:1;display:flex;justify-content:flex-end;align-items:center;">
+            <a href="?portal=reviewer" target="_blank" class="ir-footer-reviewer-btn">
+                Reviewer Portal →
+            </a>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 

@@ -26,6 +26,7 @@ from agents.news_classification import classify_news
 from agents.impact import analyze_impact
 from agents.report import generate_report
 from styles import inject_styles, render_navbar, render_footer, fix_sidebar_padding, _logo_base64
+from reviewer_app import run_reviewer_portal
 
 # ── Page config ────────────────────────────────────────────────────────────────
 _logo_img = Image.open(os.path.join(os.path.dirname(__file__), "Air.png"))
@@ -2987,7 +2988,9 @@ _REFRESH_JS = """
 </script>
 """
 
-if not st.session_state.role:
+if st.query_params.get("portal") == "reviewer":
+    run_reviewer_portal()
+elif not st.session_state.role:
     render_navbar()
     show_login()
 else:

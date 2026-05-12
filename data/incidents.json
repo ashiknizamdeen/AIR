@@ -902,5 +902,54 @@
     ],
     "impact_analysis": null,
     "report": null
+  },
+  {
+    "id": "T32423213",
+    "task_number": "T32423213",
+    "task_time": "11 May 2026 02:32 PM",
+    "title": "three errors while loading content",
+    "description": "Make sure to not get errors are one of the errors",
+    "markets": [
+      "Japanese"
+    ],
+    "locations": [
+      "Bangkok"
+    ],
+    "flows": [
+      "CM"
+    ],
+    "metric": [
+      "Volumes"
+    ],
+    "team_lead": "Ashik",
+    "created_at": "2026-05-12T18:33:45.989408",
+    "updated_at": "2026-05-12T18:34:08.881945",
+    "status": "open",
+    "classification": {
+      "category": "Application Issue",
+      "severity": "Medium",
+      "priority": "P2",
+      "reasoning": "Content loading errors affecting volume metrics indicate application-level failures impacting service delivery. Medium severity due to single affected metric and unclear error scope.",
+      "remediation_actions": [
+        "Review application logs for content loading error details and stack traces",
+        "Check content delivery pipeline and data source connectivity status",
+        "Verify volume processing queue for stuck or failed jobs",
+        "Implement temporary fallback mechanism while investigating root cause"
+      ]
+    },
+    "responses": {
+      "yuki_jp": true
+    },
+    "resolution_responses": {},
+    "rebroadcast_history": [],
+    "last_broadcast_at": "2026-05-12T18:33:49.609092",
+    "remediation_actions": [
+      "Review application logs for content loading error details and stack traces",
+      "Check content delivery pipeline and data source connectivity status",
+      "Verify volume processing queue for stuck or failed jobs",
+      "Implement temporary fallback mechanism while investigating root cause"
+    ],
+    "impact_analysis": null,
+    "report": null
   }
 ]

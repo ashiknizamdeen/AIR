@@ -1309,6 +1309,27 @@
       "responded": false,
       "superseded": false,
       "created_at": "2026-05-08T11:09:27.377907"
+    },
+    {
+      "notif_id": "dd99f443",
+      "incident_id": "T32423213",
+      "type": "new_incident",
+      "label": "NEW",
+      "title": "three errors while loading content",
+      "description": "Make sure to not get errors are one of the errors",
+      "market": "Japanese",
+      "severity": "Medium",
+      "team_lead": "Ashik",
+      "remediation_actions": [
+        "Review application logs for content loading error details and stack traces",
+        "Check content delivery pipeline and data source connectivity status",
+        "Verify volume processing queue for stuck or failed jobs",
+        "Implement temporary fallback mechanism while investigating root cause"
+      ],
+      "read": false,
+      "responded": false,
+      "superseded": false,
+      "created_at": "2026-05-12T18:33:49.579769"
     }
   ],
   "chan_kh": [
@@ -2058,6 +2079,27 @@
       "responded": false,
       "superseded": false,
       "created_at": "2026-05-08T11:09:27.377916"
+    },
+    {
+      "notif_id": "bf0c89a8",
+      "incident_id": "T32423213",
+      "type": "new_incident",
+      "label": "NEW",
+      "title": "three errors while loading content",
+      "description": "Make sure to not get errors are one of the errors",
+      "market": "Japanese",
+      "severity": "Medium",
+      "team_lead": "Ashik",
+      "remediation_actions": [
+        "Review application logs for content loading error details and stack traces",
+        "Check content delivery pipeline and data source connectivity status",
+        "Verify volume processing queue for stuck or failed jobs",
+        "Implement temporary fallback mechanism while investigating root cause"
+      ],
+      "read": false,
+      "responded": false,
+      "superseded": false,
+      "created_at": "2026-05-12T18:33:49.579737"
     }
   ],
   "kumari_lk": [
@@ -3028,6 +3070,27 @@
       "responded": false,
       "superseded": false,
       "created_at": "2026-05-08T11:09:27.377933"
+    },
+    {
+      "notif_id": "faa816b9",
+      "incident_id": "T32423213",
+      "type": "new_incident",
+      "label": "NEW",
+      "title": "three errors while loading content",
+      "description": "Make sure to not get errors are one of the errors",
+      "market": "Japanese",
+      "severity": "Medium",
+      "team_lead": "Ashik",
+      "remediation_actions": [
+        "Review application logs for content loading error details and stack traces",
+        "Check content delivery pipeline and data source connectivity status",
+        "Verify volume processing queue for stuck or failed jobs",
+        "Implement temporary fallback mechanism while investigating root cause"
+      ],
+      "read": true,
+      "responded": true,
+      "superseded": false,
+      "created_at": "2026-05-12T18:33:49.579761"
     }
   ],
   "sophea_kh": [
