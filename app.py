@@ -25,7 +25,7 @@ from agents.classification import classify_incident
 from agents.news_classification import classify_news
 from agents.impact import analyze_impact
 from agents.report import generate_report
-from styles import inject_styles, render_navbar, render_footer, fix_sidebar_padding, _logo_base64
+from styles import inject_styles, render_navbar, render_footer, fix_sidebar_padding, _logo_base64, render_chat_widget
 from reviewer_app import run_reviewer_portal
 
 # ── Page config ────────────────────────────────────────────────────────────────
@@ -3002,6 +3002,7 @@ else:
     if st.button("↻", key="_ir_content_refresh"):
         st.rerun()
     show_sidebar()
+    render_chat_widget()
 
     if not st.session_state.get("broadcast_policy_ack"):
         _broadcast_policy_dialog()

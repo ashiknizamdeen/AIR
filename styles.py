@@ -1741,3 +1741,280 @@ def render_navbar(display_name: str = "", role: str = ""):
         f'</div>',
         unsafe_allow_html=True
     )
+
+
+def render_chat_widget():
+    """Render the floating global TL chat widget (demo — CSS checkbox toggle, no JS needed)."""
+    st.markdown("""
+    <style>
+    /* Hidden checkbox drives the open/close — no JavaScript needed */
+    #irChatCheck { display: none; }
+
+    /* FAB — label acts as the clickable button */
+    label.ir-chat-fab {
+        position: fixed;
+        bottom: 46px;
+        right: 24px;
+        z-index: 9997;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #A100FF, #002F5C);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 16px rgba(161,0,255,0.38);
+        transition: transform 0.2s, box-shadow 0.2s;
+        font-size: 18px;
+        color: #fff;
+        user-select: none;
+    }
+    label.ir-chat-fab:hover {
+        transform: scale(1.08);
+        box-shadow: 0 6px 22px rgba(161,0,255,0.48);
+    }
+    .ir-chat-badge {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background: #DC2626;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 999px;
+        padding: 1px 5px;
+        min-width: 16px;
+        text-align: center;
+        line-height: 14px;
+        border: 1.5px solid #fff;
+    }
+
+    /* Panel — hidden by default */
+    .ir-chat-panel {
+        position: fixed;
+        bottom: 98px;
+        right: 24px;
+        z-index: 9997;
+        width: 320px;
+        height: 430px;
+        background: #fff;
+        border: 1px solid #E5E7EB;
+        border-radius: 14px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transform-origin: bottom right;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.92) translateY(10px);
+        transition: opacity 0.22s ease, transform 0.22s cubic-bezier(0.2,0.8,0.2,1);
+    }
+
+    /* When checkbox checked: show panel, hide badge */
+    #irChatCheck:checked ~ label.ir-chat-fab .ir-chat-badge {
+        display: none;
+    }
+    #irChatCheck:checked ~ .ir-chat-panel {
+        opacity: 1;
+        pointer-events: all;
+        transform: scale(1) translateY(0);
+    }
+
+    .ir-chat-header {
+        padding: 12px 16px;
+        border-bottom: 1px solid #E5E7EB;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+        background: linear-gradient(90deg,rgba(161,0,255,0.04),rgba(0,47,92,0.03));
+    }
+    .ir-chat-header-title {
+        font-size: 12px;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        color: #111827;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+    .ir-chat-online-dot {
+        width: 7px; height: 7px;
+        border-radius: 50%;
+        background: #16A34A;
+        box-shadow: 0 0 0 2px #dcfce7;
+        flex-shrink: 0;
+    }
+    label.ir-chat-close-btn {
+        background: transparent;
+        cursor: pointer;
+        color: #9CA3AF;
+        font-size: 15px;
+        line-height: 1;
+        padding: 3px 5px;
+        border-radius: 4px;
+        transition: background 0.15s, color 0.15s;
+        font-family: sans-serif;
+        user-select: none;
+    }
+    label.ir-chat-close-btn:hover { background: #F3F4F6; color: #374151; }
+    .ir-chat-messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 12px 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+    }
+    .ir-chat-msg { display: flex; flex-direction: column; gap: 3px; }
+    .ir-chat-msg-meta {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 10px;
+        color: #9CA3AF;
+        font-family: 'Poppins', sans-serif;
+    }
+    .ir-chat-msg-name {
+        font-weight: 600;
+        color: #374151;
+        font-family: 'Poppins', sans-serif;
+        font-size: 10px;
+    }
+    .ir-chat-mkt {
+        background: #F3E8FF;
+        color: #A100FF;
+        font-size: 8.5px;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        padding: 1px 5px;
+        border-radius: 999px;
+    }
+    .ir-chat-msg-bubble {
+        background: #F3F4F6;
+        border-radius: 4px 10px 10px 10px;
+        padding: 7px 11px;
+        font-size: 11.5px;
+        font-family: 'Poppins', sans-serif;
+        color: #111827;
+        line-height: 1.5;
+        max-width: 270px;
+        word-break: break-word;
+    }
+    .ir-chat-msg.ir-own .ir-chat-msg-meta { justify-content: flex-end; }
+    .ir-chat-msg.ir-own .ir-chat-msg-bubble {
+        background: linear-gradient(135deg,#A100FF,#7C3AED);
+        color: #fff;
+        border-radius: 10px 4px 10px 10px;
+        align-self: flex-end;
+    }
+    .ir-chat-msg.ir-own .ir-chat-mkt { background: #EDE9FE; color: #7C3AED; }
+    .ir-chat-input-row {
+        border-top: 1px solid #E5E7EB;
+        padding: 10px 12px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    .ir-chat-input {
+        flex: 1;
+        border: 1px solid #E5E7EB;
+        border-radius: 8px;
+        padding: 7px 11px;
+        font-size: 11.5px;
+        font-family: 'Poppins', sans-serif;
+        color: #111827;
+        background: #F9FAFB;
+        outline: none;
+        transition: border-color 0.15s, background 0.15s;
+        height: 36px;
+    }
+    .ir-chat-input:focus { border-color: #A100FF; background: #fff; }
+    .ir-chat-send-btn {
+        width: 36px; height: 36px;
+        background: linear-gradient(135deg,#A100FF,#7C3AED);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 13px;
+        color: #fff;
+        transition: opacity 0.15s, transform 0.12s;
+    }
+    .ir-chat-send-btn:hover { opacity: 0.88; transform: scale(1.06); }
+    </style>
+
+    <!-- Checkbox is the toggle mechanism — no JS needed -->
+    <input type="checkbox" id="irChatCheck">
+
+    <!-- FAB: label linked to checkbox -->
+    <label for="irChatCheck" class="ir-chat-fab" title="Global TL Chat">
+        💬
+        <span class="ir-chat-badge">3</span>
+    </label>
+
+    <!-- Chat panel -->
+    <div class="ir-chat-panel">
+        <div class="ir-chat-header">
+            <div class="ir-chat-header-title">
+                <div class="ir-chat-online-dot"></div>
+                Global TL Chat
+            </div>
+            <!-- Close button: also a label for the same checkbox -->
+            <label for="irChatCheck" class="ir-chat-close-btn">✕</label>
+        </div>
+        <div class="ir-chat-messages">
+            <div class="ir-chat-msg">
+                <div class="ir-chat-msg-meta">
+                    <span class="ir-chat-msg-name">Amir H.</span>
+                    <span class="ir-chat-mkt">BKK</span>
+                    <span>10:02 AM</span>
+                </div>
+                <div class="ir-chat-msg-bubble">Anyone seeing Maxbill spikes in your market? We've had 3 alerts in the past hour.</div>
+            </div>
+            <div class="ir-chat-msg">
+                <div class="ir-chat-msg-meta">
+                    <span class="ir-chat-msg-name">Sara K.</span>
+                    <span class="ir-chat-mkt">KL</span>
+                    <span>10:04 AM</span>
+                </div>
+                <div class="ir-chat-msg-bubble">Yes, same here. AHT jumped 15% in the past hour too. Raised a P2 already.</div>
+            </div>
+            <div class="ir-chat-msg">
+                <div class="ir-chat-msg-meta">
+                    <span class="ir-chat-msg-name">Wei L.</span>
+                    <span class="ir-chat-mkt">SG</span>
+                    <span>10:06 AM</span>
+                </div>
+                <div class="ir-chat-msg-bubble">We're clear on our end. No spikes. Could be a regional infra issue.</div>
+            </div>
+            <div class="ir-chat-msg">
+                <div class="ir-chat-msg-meta">
+                    <span class="ir-chat-msg-name">Priya M.</span>
+                    <span class="ir-chat-mkt">MNL</span>
+                    <span>10:09 AM</span>
+                </div>
+                <div class="ir-chat-msg-bubble">Just escalated to infra. They're investigating the Maxbill gateway. Will update soon.</div>
+            </div>
+            <div class="ir-chat-msg ir-own">
+                <div class="ir-chat-msg-meta">
+                    <span class="ir-chat-msg-name">You</span>
+                    <span class="ir-chat-mkt">VVO</span>
+                    <span>10:11 AM</span>
+                </div>
+                <div class="ir-chat-msg-bubble">Thanks for the update. Monitoring closely from our side.</div>
+            </div>
+        </div>
+        <div class="ir-chat-input-row">
+            <input class="ir-chat-input" placeholder="Type a message…"/>
+            <button class="ir-chat-send-btn" title="Send">&#9658;</button>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
